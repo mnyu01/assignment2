@@ -2,7 +2,7 @@ from socket import *
 
 import sys
 
-def webServer(port):
+def webServer(port=13331):
 
   serverSocket = socket(AF_INET, SOCK_STREAM)
   serverSocket.bind(("", port))
@@ -38,4 +38,4 @@ def webServer(port):
     connectionSocket.close()
 
 if __name__ == "__main__":
-  webServer(6549)
+  webServer(13331)
