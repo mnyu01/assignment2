@@ -28,8 +28,8 @@ def webServer(port=13331):
       for i in f:
         print(i)
         connectionSocket.sendto(i.encode(), addr)
-        connectionSocket.sendto(outputdata.encode(), addr)
-        connectionSocket.sendto(statuscode.encode(), addr)
+        connectionSocket.sendto(outputdata, addr)
+        connectionSocket.sendto(statuscode, addr)
       connectionSocket.close()
       
     except Exception as e:
